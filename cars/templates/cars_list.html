@@ -9,7 +9,9 @@
 
 	<ul>
 		{% for car in cars %}
-		<li>{{ car.brand }}</li>
+		<li>
+			<a href="{% url 'cars:detail' car.pk %}">{{ car.brand }}</a>
+		</li>
 		{% endfor %}
 	</ul>
 </body>
