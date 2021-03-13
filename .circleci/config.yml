@@ -24,5 +24,4 @@ jobs:
             python3 manage.py test
       - run:
           name: Deploy
-          command: |
-            ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
+          command: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP bash "deploy_project.sh"
