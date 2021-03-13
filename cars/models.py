@@ -6,7 +6,7 @@ class Car(models.Model):
     model = models.CharField(max_length=100)
 
     class Meta:
-        ordering = "brand"
+        ordering = ["brand"]
 
     def __str__(self):
         return self.brand
