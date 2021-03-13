@@ -22,6 +22,7 @@ jobs:
           command: |
             . venv/bin/activate
             python3 manage.py test
-      - store_artifacts:
-          path: test-reports/
-          destination: python_app
+      - run:
+          name: Deploy
+          command: |
+            ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_project.sh”
