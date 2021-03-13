@@ -8,6 +8,10 @@ class CarList(ListView):
     model = Car
     context_object_name = 'cars'
 
+    """def get_queryset(self):
+        return Car.objects.order_by("brand")
+    """
+
 
 class CarDetailView(DetailView):
     template_name = 'car.html'
